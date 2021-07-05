@@ -1,0 +1,22 @@
+著作権情報を表すタグ
+<small>著作権表記や免責等のテキストを表す要素
+
+メタデータタグ
+<head>にしか記述しない
+<title>ページタイトル
+<meta name="description" content="サイトの説明">
+→ yahooやgoogleのサイト説明文(スペニット)として使用される
+<link>スタイルシート, ファビコン, アプリアイコンの指定につかう
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+OPG - SNSでサイトURLをシェアしたときにWebサイトの画像や詳細をわかりやすく伝えるためのもの
+→ Twitterでリンクを貼り付けたときに表示されるアレ
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# prefix属性: http://ogp.me/ns/ prefix属性#">
+<meta property="og:title" content=" ページのタイトル" />
+<meta property="og:url" content=" ページのURL" />
+<meta property="og:type" content=" ページの種類" />
+<meta property="og:description" content=" ページの説明" />
+<meta property="og:image" content=" サムネ画像のURL" />
+<script src="js/hoge.js"></script>
+
