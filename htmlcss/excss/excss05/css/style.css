@@ -1,0 +1,50 @@
+.red {
+  color:red;
+}
+.blue {
+  color:#0000FF
+}
+.green {
+  color:rgb(0,255,0);
+}
+.reda {
+  color:rgba(255,0,0,0.2)
+}
+
+div {
+  font-size: 16px;
+}
+div p {
+  font-size: 0.5em;
+}
+
+.bold {
+  font-weight: bold;
+}
+.bolder {
+  font-weight: bolder;
+}
+.lighter {
+  font-weight: lighter;
+}
+.bold900 {
+  font-weight: 900;
+}
+.italic {
+  font-style: italic;
+}
+.oblique {
+  font-style: oblique;
+}
+.overline {
+  text-decoration: overline;
+}
+.underline {
+  text-decoration: underline;
+}
+.linethrough {
+  text-decoration: line-through;
+}
+.fontchange {
+  font-family: "メイリオ", sans-serif;
+}

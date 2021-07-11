@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+div.gradiation {
+  width: 100%;
+  height: 700px;
+  /* background: linear-gradient(0deg,#ff34ff,#8646ff); */
+  background: radial-gradient(#ff34ff,#8646ff);
+}
+div.bgimg {
+  width:500px;
+  height:300px;
+  /* background-color: blue;
+  background-image: url("../img/red.jpg");
+  background-size: 400px 200px;
+  background-position: 50px 70px;
+  background-repeat:  no-repeat; */
+  background: #0000FF url("../img/red.jpg") no-repeat center / contain
+}
+div.bg {
+  background: url("../img/firstview.jpg") no-repeat bottom / cover;
+  /* 高さを指定 */
+  height:700px;
+}

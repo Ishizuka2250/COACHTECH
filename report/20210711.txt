@@ -1,0 +1,195 @@
+【優先順位】
+!important > インライン記述 > idセレクタ > classセレクタ = 属性セレクタ > 要素名 = 疑似要素 > ユニバーサルセレクタ
+
+優先順位のポイント
+インライン記述：1000
+idセレクタ：100
+classセレクタ：10
+属性セレクタ：10
+要素名：1
+疑似要素：1
+ユニバーサルセレクタ：1
+
+属性セレクタとは？
+<p class="hoge">fuga</p>
+p[class] {
+  color:red;
+}
+→ p要素でclass属性を持っているものに適用される
+
+優先順位が同等の場合、後に記述されたものが上書きされる
+<p class="hoge">fuga</p>
+p.hoge {
+  color:red;
+}
+p[class] {
+  color:blue; ← こっちが適用される
+}
+
+!important
+<p class="hoge">fuga</p>
+p {
+  color:red !important; ← インライン記述されていてもこちらが適用される
+}
+
+優先度の計算
+<div class="contents">
+  <p class="hoge">fuga</p>
+</div>
+p.contents p.hoge { → 要素(1) + class(10) + 要素(1) + class(10) = 22
+  color:red; ← 優先度が高いこちらが適用される
+}
+.contents .hoge { → class(10) + class(10) = 20
+  color:blue;
+}
+
+【要素の表示形式】
+ブロック要素
+・前後に改行が入る
+・幅, 高さ, 余白の指定が可能
+
+インライン要素
+・前後に改行が入らない
+・幅, 高さの指定はできない
+・左右の余白指定は可能
+
+インラインブロック要素
+・要素の並びがインライン的な感じで、ブロック要素的な動きをする
+
+【文字装飾】
+文字色はColor:Colorプロパティで変更
+<Colorプロパティ>
+- カラーネーム
+- 16進数カラーコード
+- RGB・RGBAカラーモデル
+
+カラーネーム
+Red, Blue, Black など名前で指定可能な色
+p {
+  color:red;
+}
+
+16進数カラーコード
+RGBの16進数で色を表現したもの
+例：Red → RGB(255,0,0) → #FF0000 (16進数カラーコード)
+p {
+  color:#FF0000
+}
+
+RGB・RGBAカラーモデル
+RGBで色を表現したもの
+例：Red → RGB(255,0,0)
+p {
+  color:rgb(255,0,0)
+}
+
+RGBAは半透明にすることができる
+p {
+  color:rgba(255,0,0,0.2)
+}
+
+<文字の大きさ>
+文字の大きさはfont-size:フォントサイズで指定する
+フォントサイズの指定方法
+- px → 絶対値での指定
+- %  → 相対値での指定 親要素に指定されている文字サイズ*xx%の大きさを指定する
+- em → 相対値での指定 %と同じ考え。1＝100%として考える
+- rem→ 相対値での指定 emと同じ考えだけど、HTML要素を基準に適用される
+
+<文字の太さ>
+文字の太さはfont-weight:太さで指定可能
+太さの指定方法
+- normal (初期値)
+- bold
+- bolder
+- lighter
+- 数値指定 100～900 (初期値:400)
+
+<文字を斜めにする>
+文字を斜めにする場合は font-style:値 で指定する
+斜めの指定方法
+- normal (初期値)
+- italic
+- oblique
+italic でも oblique でも斜体になる
+
+<文字に線をつける>
+文字に線を付ける場合は text-decoration:値 で指定する
+- none (初期値)
+- underline 下線
+- overline  上線
+- line-through 中線
+
+<フォントの変更>
+フォントを変更する場合は font-family: 英字フォント, 日本語のフォント, 総称フォント で指定する
+・2単語に分かれているフォントはダブルクォーテーションで囲む
+・windows, macで対応しているフォントが異なる
+・左のフォントから優先される
+・総称フォントはダブルクォーテーションやシングルクォーテーションで囲まない
+→ フォントファミリーとして認識されてしまう恐れがある
+総称フォント：Windowsでもmacでも表示されるフォント
+
+【Webフォントの使い方】
+Webフォントのメリット
+- デザインを均一化できる
+- デザイン性に優れている
+Webフォントのデメリット
+- ページの読み込みが遅くなる
+- 有料のものもある
+
+【文字揃えと行の高さ】
+<文字揃え>
+文字揃えは text-align:値 で指定する
+- left (初期値)
+- right 右揃え
+- center 中央揃え
+- justify 均等揃え (改行位置を均一化する 文字量が多い場合に使用すると良い)
+※text-alignプロパティを使用するには以下の条件を満たすこと
+ - 指定する要素がインライン要素であること
+ - セレクタはブロック要素である親要素を指定する ..？
+
+<行の高さ>
+行の高さは line-height:値 で指定可能
+- normal (初期値)
+- px 絶対値指定
+- %  相対値指定 指定したfont-size*xx%で指定する
+
+【背景色】
+背景色は background-color: 値 で指定する
+フォントカラー指定と同様に RGB, RGBA, カラーコード, カラーネームが使用可能
+
+<グラデーション>
+線形的なグラデーションは background: linear-gradient(角度(xxdeg), 指定色, 指定色) で指定する
+background: linear-gradient(#ff0000,#000000)
+background: linear-gradient(90deg,#ff0000,#000000) → 左から右へグラデーションをかける
+円形にグラデーションを書ける場合は background: radial-gradient(指定色, 指定色) で指定する
+background: radial-gradiant(#ff34ff, #8646ff)
+
+<背景画像>
+背景画像の指定は background-image: url("画像格納先"); で指定する
+背景画像の大きさは background-size: 値 で指定する
+- auto (初期値)
+- cover   要素を埋め尽くすサイズへ拡大縮小する
+- contain 背景画像全体が見えるように拡大縮小する
+- px 直接指定
+- %  要素のサイズ*xx%で指定する
+参考：https://www.keicode.com/script/css-background-size.php
+
+<背景画像の繰り返し>
+表示領域 > 背景画像 の場合、デフォルトでは繰り返し表示となる
+繰り返し設定は background-repeat: 値 で指定する
+- repeat (初期値)
+- repeat-x 横方向のみ繰り返し
+- repeat-y 縦方向のみ繰り返し
+- no-repeat 繰り返ししない
+
+<背景画像の位置>
+背景画像の位置は background-position: top, bottom left, right で指定する
+また、background-position xxpx xxpx や background-position xx% xx% でも指定可能
+→ 左上を起点に [左から xxpx] [上から xxpx] で指定される 
+
+<背景画像のショートハンド>
+背景画像に関する指定は以下のように1行で指定できる
+background: 色 url(ファイル名) 繰り返し 位置 / サイズ;
+
+

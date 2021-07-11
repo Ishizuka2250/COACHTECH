@@ -1,6 +1,20 @@
-p {
-  color:red;
+div.block {
+  background-color: red;
 }
-li {
-  color:blue;
+span.inline {
+  background-color: blue;
+  color: white;
+  width:200px;
+}
+div.inlineBlock{
+  display: inline-block;
+}
+#red {
+  background-color: red;
+}
+#blue {
+  background-color: blue;
+}
+#green {
+  background-color: green;
 }
