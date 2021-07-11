@@ -20,3 +20,6 @@ OPG - SNS‚ÅƒTƒCƒgURL‚ðƒVƒFƒA‚µ‚½‚Æ‚«‚ÉWebƒTƒCƒg‚Ì‰æ‘œ‚âÚ×‚ð‚í‚©‚è‚â‚·‚­“`‚¦‚é‚
 <meta property="og:image" content=" ƒTƒ€ƒl‰æ‘œ‚ÌURL" />
 <script src="js/hoge.js"></script>
 
+Emmet‚Æ‚Í
+html‚âcss‚ðÈ—ª‹L–@‚Å‹Lq‚·‚é‚½‚ß‚Ìƒc[ƒ‹
+

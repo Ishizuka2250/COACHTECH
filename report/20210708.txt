@@ -1,0 +1,57 @@
+css
+【セットアップ】
+<link rel="stylesheet" href="cssファイルのパス" />
+
+リセットCSS
+WebブラウザにはそれぞれデフォルトのCSSが設定されている
+「デフォルトのCSS」を消すCSSを「リセットCSS」という
+→ HTML5 Reset Stylesheet を使用
+
+idとclass
+id → Webページ内での重複NG
+class → Webページ内での重複OK
+基本的にStyleを当てる場合はClassを使用すること
+
+CSSの基本構造
+セレクタ {
+  プロパティ:値;
+}
+
+【セレクタ】
+要素セレクタ
+p {
+  color:red;
+}
+
+IDセレクタ
+#sample {
+  color:red;
+}
+
+Classセレクタ
+.sample {
+  color:red;
+}
+
+全称セレクタ
+* {
+  color:red;
+}
+
+子孫セレクタ
+div span {
+  color:red;
+}
+→ この例ではdivタグ配下のspanタグ全てにスタイルを適用する
+
+子セレクタ
+div > a {
+  color:red;
+}
+→ この例ではdiv配下のaタグのみに適用される
+
+
+
+
+
+
