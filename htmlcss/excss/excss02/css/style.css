@@ -1,0 +1,56 @@
+strong {
+  color:red;
+}
+#test {
+  color:blue;
+}
+.test {
+  color:green;
+}
+div span{
+  color:aqua;
+}
+
+div > a{
+  color:brown;
+}
+
+p + span {
+  color:blueviolet;
+}
+
+h3, h4 {
+  color:cyan;
+}
+
+/* div p:first-child {
+  color:burlywood;
+} */
+
+/* div p:first-of-type {
+  color:cadetblue;
+} */
+
+/* div h5:last-child {
+  color:chartreuse;
+} */
+
+/* div h5:last-of-type {
+  color:pink;
+} */
+
+/* div p:nth-of-type(3) {
+  color:coral;
+} */
+
+/* div p:nth-of-type(3n) {
+  color:coral;
+} */
+
+/* div p:nth-of-type(3n-1) {
+  color:coral;
+} */
+
+div p:nth-of-type(n+3) {
+  color:coral;
+}

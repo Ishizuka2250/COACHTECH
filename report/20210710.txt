@@ -1,0 +1,74 @@
+セレクタ のつづき
+
+隣接セレクタ
+p + span {
+  color:blueviolet;
+}
+→ pタグの次のspanタグのみ適用される
+<p>hoge</p>
+<span>色が変わる</span>
+→ pタグの入れ子になっている場合は適用されない
+<p><span>色が変わらない</span></p>
+
+複数セレクタ
+h3, h4 {
+  color:cyan;
+}
+→ h3タグとh4タグに適用される
+
+要素:first-child
+div p:first-child {
+  color:burlywood;
+}
+<div>
+  <p>first-child (first-of-type)</p>
+  <p>色が変わらない</p>
+</div>
+<div>
+  <h3>色が変わらない</h3>
+  <p>色が変わらない</p>
+</div>
+
+要素:first-of-type
+div p:first-of-type {
+  color:cadetblue;
+}
+<div>
+  <p>first-of-type (first-child)</p>
+  <p>色が変わらない</p>
+</div>
+<div>
+  <h3>色が変わらない</h3>
+  <p>first-of-type</p>
+</div>
+
+first-child と first-of-type の違い
+div p: first-child
+→ divの1番目の要素がpであれば適用される
+→ 間にp以外のタグがある場合は適用されない
+div p: first-of-type
+→ divの1番目の要素pが適用される
+→ 間にp以外のタグがある場合も適用される
+※last-child, last-of-typeも似たような考え
+
+要素:nth-of-type()
+div p:nth-of-type(3) {
+  color:coral;
+}
+→ div要素3番目のp要素を適用
+
+div p:nth-of-type(3n) {
+  color:coral;
+}
+→ div要素の3の倍数のp要素を適用
+
+div p:nth-of-type(3n-1) {
+  color:coral;
+}
+→ div要素の3n-1のp要素を適用 (2, 5, 8 ... 3n-1)
+
+div p:nth-of-type(n+3) {
+  color:coral;
+}
+→ div要素の3番目以降のp要素を適用
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Document</title>
+</head>
+<body>
+  <h2>要素セレクタ</h2>
+  <strong>色が変わる</strong>
+  <h2>IDセレクタ</h2>
+  <p id="test">色が変わる</p>
+  <h2>Classセレクタ</h2>
+  <p class="test">色が変わる</p>
+  <h2>子孫セレクタ</h2>
+  <div>
+    <span>色が変わる</span>
+    <p>ここは変わらない</p>
+    <p>
+      <span>色が変わる</span>
+    </p>
+  </div>
+  <h2>子セレクタ</h2>
+  <div>
+    <a href="#">色が変わる</a>
+    <p>ここは変わらない</p>
+    <span><a href="#">ここは変わらない</a></span>
+  </div>
+  <h2>隣接セレクタ</h2>
+  <p>ここは変わらない</p>
+  <span>色が変わる</span>
+  <span>ここは変わらない</span>
+  <h2>複数セレクタ</h2>
+  <h3>色が変わる</h3>
+  <h4>色が変わる</h4>
+  <p>色が変わらない</p>
+  <h2>要素：first-child first-of-type</h2>
+  <div>
+    <h3>複数セレクタ</h3>
+    <p>first-of-type</p>
+    <h3>複数セレクタ</h3>
+  </div>
+  <div>
+    <p>first-child (first-of-type)</p>
+    <h3>複数セレクタ</h3>
+  </div>
+  <h2>要素：last-child last-of-type</h2>
+  <div>
+    <h5>色が変わらない</h5>
+    <h5>last-child (last-of-type)</h5>
+  </div>
+  <div>
+    <h5>色が変わらない</h5>
+    <p>色が変わらない</p>
+    <h5>last-of-type</h5>
+    <p>色が変わらない</p>
+  </div>
+  <h2>要素：nth-of-type()</h2>
+  <div>
+    <p>色が変わらない</p>
+    <p>色が変わらない</p>
+    <p>色が変わる</p>
+    <p>色が変わらない</p>
+    <p>色が変わらない</p>
+    <p>色が変わる</p>
+    <p>色が変わらない</p>
+    <p>色が変わらない</p>
+    <p>色が変わる</p>
+    <p>色が変わらない</p>
+    <p>色が変わらない</p>
+  </div>
+</body>
+</html>
