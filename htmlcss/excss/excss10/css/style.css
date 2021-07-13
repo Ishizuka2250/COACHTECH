@@ -1,0 +1,33 @@
+h2.margin {
+  background:#ff0000;
+  margin: 30px;
+}
+p {
+  background:#000000;
+  color:#f0f0f0;
+}
+h2.padding {
+  background:#00ff00;
+  padding:30px;
+}
+div.cb {
+  background:#0000ff;
+  width:300px;
+  height:300px;
+  padding:30px;
+  margin-bottom: 20px;
+  border:20px solid #000000;
+  color:#f0f0f0;
+}
+.content-box {
+  box-sizing: content-box;
+}
+.border-box {
+  box-sizing: border-box;
+}
+.center {
+  margin:0px auto 0px;
+}
+.right {
+  margin:0px 0px 0px auto;
+}

@@ -1,0 +1,74 @@
+【横幅と高さ】
+
+<横幅>
+ブロック要素の横幅は width:値 で指定可能
+- auto 
+- px 直接指定
+- % 親要素*xx%
+- vw 0～100で指定する。ブラウザサイズに応じた割合で表示幅が変わる
+
+<高さ>
+ブロック要素の高さは height:値 で指定可能
+- auto
+- px 直接指定
+- %  親要素*xx%
+- vw 0～100で指定する。ブラウザサイズに応じた割合で表示幅が変わる
+
+【余白】
+<ボックスモデル>
+content -- テキストや画像が表示される領域 width, height で大きさの指定が可能
+padding -- 要素の内側の余白領域 padding: で指定可能
+border  -- padding or content の境界線・枠線 border:値 で指定可能
+margin  -- borderの外側の余白領域 margin:  で指定可能
+
+content → margine → border → padding の順番
+
+<外側の余白>
+外側の余白は以下のプロパティで上下左右指定可能
+margin-top
+margin-bottom
+margin-left
+margin-right
+
+ショートハンドで指定する場合は以下の通り
+margin:10px 20px; 上下10px, 左右20px
+margin:10px 20px 30px; 上10px, 左右20px, 下30px
+margin:10px 20px 30px 40px; 上10px, 右20px, 下30px, 左40px
+
+<内側の余白>
+内側の余白は以下プロパティで上下左右指定可能
+padding-top
+padding-bottom
+padding-left
+padding-right
+
+ショートハンドで指定する場合は以下の通り (marginと同じ指定方法)
+padding:10px 20px; 上下10px, 左右20px
+padding:10px 20px 30px; 上10px, 左右20px, 下30px
+padding:10px 20px 30px 40px; 上10px, 右20px, 下30px, 左40px
+
+<box-sizing>
+要素の幅や高さにborderやpaddingを含めるか否かを設定するプロパティ
+box-sizing:content-box (初期値)
+width:300px
+height:300px
+padding:30px
+border:20px
+→ 全長が400px, 400pxになる
+Stageeの記載内容が間違っている？
+
+box-sizing:border-box
+width:300px
+height:300px
+padding:30px
+border:20px
+→ 全長が300px, 300pxになる (widthとheightに収まる)
+
+<中央揃え>
+要素を中央揃えにする場合 auto を指定する
+左右に中央揃えする場合
+margin: 0px auto;
+右揃えにする場合
+margin: 0px 0px 0px auto;
+
+
