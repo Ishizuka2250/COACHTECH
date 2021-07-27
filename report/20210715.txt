@@ -1,0 +1,47 @@
+【枠線と角丸】
+
+<枠線>
+枠線はスタイル・太さ・色の3種類を指定可能
+・border-style
+  - sold 1本線
+  - double 2本線
+  - dashed 破線
+  - dotted 点線
+・border-width 太さ pxで指定
+・border-color 色を指定
+ショートハンド
+border: border-style border-width border-color
+
+枠線は個別に指定することも可能
+・border-top
+・border-bottom
+・border-left
+・border-right
+
+<角丸>
+要素のコーナーを角丸に指定する
+・border-radius: xxpx or %で指定
+
+枠線と同様に個別に指定することも可能
+・border-top-left-radius
+・border-top-right-radius
+・border-bottom-left-radius
+・border-bottom-right-radius
+
+ショートハンドで指定する場合は以下の通り
+border-radius: 左上 右上 右下 左下;
+
+<正円>
+正方形を作成して border-radius: 50% で作成可能 
+
+【影】
+<要素に対する影>
+要素の周囲に影を付ける場合は box-shadow で指定する
+box-shadow: 左右の向き 上下の向き ぼかし距離 色;
+左右・上下の向きはマイナス・プラスで変更できる
+
+<文字に対する影>
+文字に影を付ける場合は text-shadow で指定する
+text-shadow: 左右の向き 上下の向き ぼかし距離 色;
+
+

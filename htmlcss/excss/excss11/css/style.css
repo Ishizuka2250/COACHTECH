@@ -1,0 +1,28 @@
+p.border {
+  border: solid 2px #ff0000;
+}
+
+div.radius {
+  width: 200px;
+  height: 200px;
+  background: #ff0000;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+div.circle {
+  width: 200px;
+  height: 200px;
+  background: #ff0000;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+div.ex {
+  width: 200px;
+  height: 200px;
+  background: #ff0000;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  margin: 10px;
+}

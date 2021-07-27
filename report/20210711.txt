@@ -56,6 +56,10 @@ p.contents p.hoge { → 要素(1) + class(10) + 要素(1) + class(10) = 22
 インラインブロック要素
 ・要素の並びがインライン的な感じで、ブロック要素的な動きをする
 
+display: inline;
+display: block;
+display: inline-block;
+
 【文字装飾】
 文字色はColor:Colorプロパティで変更
 <Colorプロパティ>

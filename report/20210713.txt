@@ -63,6 +63,7 @@ height:300px
 padding:30px
 border:20px
 → 全長が300px, 300pxになる (widthとheightに収まる)
+→ 子要素のサイズが親要素を越えた場合は width height に収まらない
 
 <中央揃え>
 要素を中央揃えにする場合 auto を指定する
