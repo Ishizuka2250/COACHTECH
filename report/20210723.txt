@@ -1,0 +1,38 @@
+【静的UIパーツ】
+Webデザインを考える上でUIパーツとレイアウトを分けて考える
+
+cursor: pointer
+→ 要素に置いたマウスカーソルの表示を変更する
+
+<flexbox の width:100%>
+
+<div class="flex-test">
+  <div class="object1"></div>
+  <div class="object2"></div>
+</div>
+.flex-test {
+  width: 60%;
+  display: flex;
+  margin: 20px auto;
+}
+.object1 {
+  width: 100%;
+  height: 100px;
+  background: #f00;
+}
+.object2 {
+  width: 100%;
+  height: 100px;
+  background: #ff0;
+}
+→ object1, object2のWidthはブラウザ幅の30%, 30%になる。
+
+【レイアウト】
+代表的なレイアウトパターンは以下の4つ
+・シングルカラムレイアウト
+・マルチカラムレイアウト
+・グリッド型レイアウト
+・フルスクリーン型レイアウト
+
+
+
