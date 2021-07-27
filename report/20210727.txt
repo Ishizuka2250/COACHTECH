@@ -1,0 +1,15 @@
+【LP制作】
+
+親要素にborder-radius:xxpxを指定しても子要素が丸くならない場合
+親要素にoverflow: hidden;を追加する
+<div>
+  <p>子要素</p>
+</div>
+
+div {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+
+
