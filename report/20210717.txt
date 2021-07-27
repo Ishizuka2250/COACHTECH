@@ -1,0 +1,96 @@
+【Flexbox】
+
+Flexbox → 要素の配置方法
+横並びにしたい場合、要素の親要素のdisplayプロパティをflexに指定する
+.parent {
+  display: flex;
+}
+
+<並ぶ向き flex-direction>
+子要素の配置方向はflex-directionプロパティを指定する
+.parent {
+  display: flex;
+  flex-direction row;
+}
+- row(初期値)    左から右に配置する
+- row-reverse    右から左に配置する
+- column         上から下に配置する
+- column-reverse 下から上に配置する
+※文字が途切れてる...
+
+<水平方向の配置: justify-content>
+中央に配置したり、等間隔で配置する等の水平方向の配置はjustify-contentプロパティを指定する
+.parent {
+  display: flex;
+  justify-content: flex-start;
+}
+- flex-start (初期値) 左揃えで配置される
+- flex-end            右揃えで配置される
+- center              中央揃えで配置される
+- space-between       最初と最後の子要素を両端に配置して、その間の子要素は均等配置される
+- space-around        全ての子要素が均等配置される
+
+<垂直方向の配置: align-items>
+横並びになった子要素は親要素の上端を基準に垂直方向に並ぶ
+中央に配置したりする場合はalign-itemsプロパティで指定する
+.parent {
+  display: flex;
+  align-items: stretch;
+}
+- stretch (初期値) 親要素の高さ or コンテンツの一番多い子要素の高さに合わせて広げて配置される
+- flex-start       親要素の縦方向の開始位置から配置される
+- flex-end         親要素の縦方向の終端位置から配置される
+- center           親要素の中間(中央揃え)で配置される
+
+<折り返し: flex-wrap>
+横並びになった子要素を折り返したい時にflex-wrapプロパティを使用する
+flex-wrapを使用することで子要素の折返し方向を指定できる
+.parent {
+  display: flex;
+  align-items: stretch;
+}
+- no-wrap (初期値) 子要素の折り返しなし。1行で表示される
+- wrap             親要素の幅 < 子要素の幅 となった場合に子要素が折り返され複数行で表示される
+- wrap-reverse     wrapとは逆に下から上へ折り返される
+→ align-items: stretch で折返しが発生した場合は親要素から子要素がはみ出ることはなく、
+　 親要素の中で子要素が均等的な高さに自動変更される
+→ 子要素が固定値で高さを指定している場合は親要素をはみ出ることがある
+
+【Position】
+ Positionプロパティを使用して要素の配置方法を指定することができる
+- static (初期値)
+- relative
+- absolute
+- fixed
+- sticky
+→ static以外を設定した場合、上下左右に指定したPxづつ要素を移動させることができる
+※Positionはあまり多用しないようにする(他の技術で応用が効く場合はそちらを使用する)
+
+
+<相対位置: relative>
+元々Staticだった位置を基準に指定する場合に使用する
+.item {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+<絶対位置: absolute>
+position: static以外で指定している親要素を基準に位置指定することができる
+親要素にpositionが指定されていない場合はウィンドウの左上の基準として位置を指定する
+
+<固定位置: fixed>
+スクロールしてもそのままで位置固定できる値
+固定ヘッダなどに用いられる
+fixedはブラウザ左上を基準として位置指定する
+
+<固定位置: sticky>
+fixedと同様にスクロールしてもそのままの位置で固定することができる値
+stickyは要素が画面上部に到達した時点で画面上部で固定させることができる
+サイドバーの固定等で使用される
+
+
+
+
+
+

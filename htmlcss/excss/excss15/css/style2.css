@@ -1,0 +1,18 @@
+div.practice {
+  width: 100%;
+  position: relative;
+}
+div.practiceimg {
+  width: 50%;
+  position: relative;
+  left: 50%;
+}
+div img {
+  width: 100%;
+}
+.text {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}

@@ -1,0 +1,46 @@
+div.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+div.card {
+  width: 360px;
+  margin: 100px auto 0;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+img.cardimg{
+  width: 100%;
+}
+div.content {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+p.category {
+  background: #008888;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  padding:10px;
+  display: inline-block;
+}
+p.text {
+  margin: 0 0 20px 0 ;
+  font-size: 18px;
+  font-weight: bold;
+}
+div.footer {
+  margin-top:30px;
+  text-align: right;
+}
+span.tag {
+  font-size: 14px;
+  color: #008888;
+  margin-bottom: 15px;
+}
+span.date {
+  font-size: 14px;
+  color: #888888;
+  margin-left: 20px;
+}

@@ -1,0 +1,35 @@
+.item1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+.item2 {
+  width: 100px;
+  height: 100px;
+  background: green;
+}
+.parent {
+  width: 500px;
+  height: 500px;
+  background: red;
+  position: relative;
+}
+.item3 {
+  width: 150px;
+  height: 150px;
+  background: #00ff00;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.fixed {
+  width: 100%;
+  height: 30px;
+  background: #880088;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}

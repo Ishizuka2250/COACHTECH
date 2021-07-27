@@ -1,0 +1,26 @@
+div.parent {
+  color: #fff;
+  background: red;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: stretch;
+  flex-wrap: wrap-reverse;
+  height: 200px;
+}
+div.child {
+  width: 100px;
+  /* height: 100px; */
+  padding: 10px;
+  margin: 10px;
+  background: #000;
+}
+div.child1 {
+  height: 100px;
+}
+div.child2 {
+  height: 300px;
+}
+div.child3 {
+  height: 200px;
+}
