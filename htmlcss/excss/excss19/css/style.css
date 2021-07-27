@@ -1,0 +1,96 @@
+p.bef::before {
+  content: "COACH";
+  color: #ff0000;
+}
+p.aft::after {
+  content: "TECH";
+  color: #ff0000;
+}
+h2.title::before {
+  content: "";
+  background: url("../img/inspiration.svg");
+  background-size: cover;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+a.download {
+  position: relative;
+  background-color: #5bb;
+  width: 200px;
+  display: block;
+  padding: 18px;
+  text-align: center;
+  color: #fff;
+  font-style: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  margin: 100px auto;
+}
+a.download::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  background: url("../img/download__icon.svg") no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  transform: translate(0, -50%);
+}
+.speech_bubble {
+  padding: 10px 20px;
+  background: red;
+  position: relative;
+  display: inline-block;
+  color:#fff
+}
+.speech_bubble::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  content: "";
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-top: 10px solid red;
+}
+.inquiry {
+  color:#fff;
+  width: 300px;
+  padding: 18px 50px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  background: #5bb;
+  position: relative;
+}
+.inquiry::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background: url("../img/mail.svg") no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  transform: translate(0, -50%);
+  display: inline-block;
+}
+.inquiry::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  background: url("../img/download__icon.svg") no-repeat;
+  background-size: cover;
+  transform: translate(0, -50%);
+}
+
+
+
+
+

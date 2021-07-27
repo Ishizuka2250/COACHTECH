@@ -1,0 +1,131 @@
+【Float】
+Flexboxと同様に横並びに要素を配置する方法
+Flexboxが流行る前はFloatが一般的だった
+
+<Float>
+指定した要素に他の要素を回り込ませるプロパティ
+- none (初期値)
+- left  左回りこみ
+- rignt 右回り込み
+
+<Clear>
+2つ要素が要素があり、1つ目にのみfloatを設定した場合2つ目の要素が隠れてしまう。
+これを防ぐためにClearプロパティのbothを指定する必要がある
+※float要素は文字通り要素を浮遊させるものである。
+　上記の例では2つ目の要素が1つ目の下に隠れている状態となる
+
+【CSS Grid Layout】
+CSS Grid Layoutは flexbox や float とは異なり、2次元で要素の配置を行う
+1次元レイアウトは複数に分けたブロックを横方向に並べるが
+2次元レイアウトは1枚のブロックを縦横に区切って配置する
+
+<グリッドの定義: display: grid>
+CSSグリッドを適用させる場合は親要素にdisplay: grid を記述する
+<div class="grid">
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+  <div class="box3">box3</div>
+  <div class="box4">box4</div>
+  <div class="box5">box5</div>
+</div>
+.grid {
+  display: grid;
+}
+
+<行ラインの定義: grid-template-rows>
+grid-template-rows: 100px 300px 300px;
+→ 行を100px, 300px, 300px で分割する
+
+<列ラインの定義: grid-template-columns>
+grid-template-columns: 2fr 1fr 1fr
+→ x fr は分割した分の割合(分割数)を示す
+→ 上記例の場合は 2 : 1 : 1 の比率で分割される
+
+<要素の配置>
+アイテムの配置は grid-rowプロパティ grid-columnプロパティ を使用する
+.box1 {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+【要素の変形】
+<要素の回転>
+要素を回転する場合はtransformプロパティのrotate()を使用する
+transform: rotate(角度deg);
+
+<要素の移動>
+移動はpositionプロパティでもできるが、アニメーションや細かな移動を行う際は
+transformプロパティのtranslate()を使用する。
+transform: translate(x軸, y軸)
+値が正の場合：X軸 右方向, Y軸 下方向
+値が負の場合：X軸 左方向, Y軸 上方向
+
+<上下左右中央配置>
+translateとpositionを同時利用することで要素を上下左右中央配置することができる
+<div class="parent">
+  <div class="child">子要素</div>
+</div>
+.parent {
+  position: relative;
+  background: black;
+  color: white;
+  width: 300px;
+  height: 300px;
+}
+.child {
+  position: absolute;
+  //top:50%, left:50% で親要素の中間位置を子要素の開始位置にする
+  top: 50%;
+  left: 50%;
+  //translate(-50%, -50%) で子要素の中間に移動
+  transform: translate(-50%, -50%);
+}
+上下左右中央配置はflexboxを使用することでも可能
+<div class="flex">
+  <p class="flex__child">株式会社estra</p>
+</div>
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #008888;
+  height: 600px;
+}
+
+.flex__child {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 600;
+}
+
+【疑似要素】
+疑似要素は検索エンジンにコンテンツとして認識されないため
+SEOを気にせずに様々なコンテンツを配置することができる
+
+<before>
+選択した要素の直前に擬似要素を作成する
+p::before {
+  content: "hoge";
+  color: red;
+}
+
+<after>
+選択した要素の直後に疑似要素を作成する
+p::after {
+  content: "fuga";
+  color: red;
+}
+※beforeとafterは同時に使用することも可能
+
+<疑似要素がよく使われる場所>
+*見出しアイコン*
+疑似要素はテキストだけでなく画像を出力することも可能
+- contentの中で画像パスを記載する
+- backgroundで画像を出力する (推奨)
+
+ボタンにアイコンを表示
+
+
+
+
+
