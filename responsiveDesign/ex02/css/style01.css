@@ -1,17 +1,148 @@
+ /*
 .item {
-    width: 70%;
-    position: relative;
+  width: 70%;
+  position: relative;
 }
 .item::before {
-    content: "temp";
-    display: block;
-    padding-top: 75%;
+  content: "temp";
+  display: block;
+  padding-top: 75%;
 }
 .item-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: yellow;
+} */
+
+/*
+  <p class="item1">要素1</p>
+  <p class="item2">要素2</p>
+.item {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .item {
+    font-size: 12px;
+  }
+} */
+
+/*
+  <p class="item1">要素1</p>
+  <p class="item2">要素2</p>
+.item2 {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .item1{
+    display: none;
+  }
+  .item2{
+    display: block;
+  }
+} */
+
+/*
+<div class="parent">
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+</div>
+.parent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.child {
+  width: 33%;
+  height: 200px;
+  background: #f00;
+}
+@media screen and (max-width: 768px) {
+  .child {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .child {
+    width: 100%;
+  }
+} */
+div.flex-item-wrap {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+div.card {
+  width: 30%;
+  margin: 100px auto 0;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1000px) {
+  div.card {
+    width: 30%;
+    margin: 100px auto 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (min-width: 768px) {
+  div.card {
+    width: 45%;
+    margin: 100px auto 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (min-width: 480px) {
+  div.card {
+    width: 100%;
+    margin: 100px auto 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+img.cardimg{
+  width: 100%;
+}
+div.content {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+p.category {
+  background: #008888;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  padding:10px;
+  display: inline-block;
+}
+p.text {
+  margin: 0 0 20px 0 ;
+  font-size: 18px;
+  font-weight: bold;
+}
+div.footer {
+  margin-top:30px;
+  text-align: right;
+}
+span.tag {
+  font-size: 14px;
+  color: #008888;
+  margin-bottom: 15px;
+}
+span.date {
+  font-size: 14px;
+  color: #888888;
+  margin-left: 20px;
 }
