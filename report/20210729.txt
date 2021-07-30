@@ -1,0 +1,84 @@
+【CSSの基本設計】
+
+<CSSの設計>
+良いCSS設計とは
+・予測しやすい
+・再利用しやすい
+・保守しやすい
+・拡張しやすい
+
+<CSS設計ルール:セレクタ>
+[要素名]
+リセットCSSや共通のCSSを記述する以外は要素名をセレクタに利用しないこと
+→ タグ全体に適用されているCSSを打ち消すCSSを追加する必要が出てくる
+[id]
+基本的にidは装飾のために利用しない
+→ 1ページに同じidを使うことができない(再利用することができない)
+→ 優先度がid > class のためclassとidを併用すると優先度が複雑になる
+[class]
+基本的にスタイルを当てる場合はclassに統一する
+→ タグを変更してもclassが同じであればcssを修正する必要がない
+
+<CSS設計ルール:classの命名規則>
+class名に日本語, 全角, スペースの使用はNG
+class名を見て端的に意味が伝わる英語名にすること
+ハイフンとアンダーバーは統一すること
+
+<CSS設計ルール:インデントや改行>
+インデントや改行は統一すること(バラバラだと見辛い)
+
+【CSS命名規則】
+<BEMとは>
+Block・Element・Modiferの略
+Class名の命名規則が特徴的なCSS設計の一つ
+BEMを使用することで、CSSの優先順位を正しく指定できていない事によるスタイルの破綻を防ぐことができる
+・Block:塊
+・Element:要素
+・Modifer:装飾
+→ BlockとElementの間はアンダーバー2つで区切る
+→ ElementとModiferの間はハイフン2つで区切る
+block__element--modifer
+命名規則の例:
+<div class="firstview"> ← Block
+  <h1 class="firstview__ttl">株式会社estra</h1> ← Element
+  <p class="firstview_txt">プログラミングスクールを運営する会社</p> ← Element
+  <p class="firstview_txt--red">Saasサービスを運営する会社</p> ← Modifer
+</div>
+
+<Block:塊>
+Blockとは、サイト内にある一つの部品を指す。
+例:ヘッダー、フッター、サイドバーなど
+<div class="top-header">
+  <div class="top-header__logo">
+    <img src="img/logo.png" alt="">
+  </div>
+</div>
+<ul class="top-header">
+  <li class="top-header__nav"><a href="">ナビ</a></li>
+  <li class="top-header__nav"><a href="">ナビ</a></li>
+  <li class="top-header__nav"><a href="">ナビ</a></li>
+  <li class="top-header__nav"><a href="">ナビ</a></li>
+</ul>
+※1語で表現できない場合はハイフン1つでつなぐ
+
+<Element:要素>
+Elementとは、Blockを構成する要素を指す。
+例:ヘッダーの中にある企業ロゴ、ヘッダーの中にあるナビゲーションなど
+<ul class="top-header">
+  <li class="top-header__nav-list"><a href="">ナビ</a></li>
+  <li class="top-header__nav-list"><a href="">ナビ</a></li>
+  <li class="top-header__nav-list"><a href="">ナビ</a></li>
+  <li class="top-header__nav-list"><a href="">ナビ</a></li>
+</ul>
+
+<Modifier:装飾>
+Modifierとは、Element内の装飾を指す。
+例：複数の共通クラスが存在する状態で一部装飾が異なる場合に使用
+<div class="top-header__cta">
+  <a href="" class="top-header__cta-btn"></a>
+  <a href="" class="top-header__cta-btn--blue"></a> ← Modifier
+</div>
+
+
+
+
