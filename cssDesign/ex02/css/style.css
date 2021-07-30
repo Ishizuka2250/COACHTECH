@@ -1,0 +1,30 @@
+body {
+  width: 760px;
+  margin: 100px auto;
+}
+.card {
+  box-shadow: 0 2px 6px #eee;
+  display: flex;
+}
+.card__image {
+  width: 40%;
+}
+.card__image img {
+  width: 100%;
+  vertical-align: top;
+}
+.card__content {
+  margin: 10px;
+}
+.card__content-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.card__content-tag {
+  display: inline-block;
+  font-size: 14px;
+}
+.card__content-tag--red {
+  color: red;
+}
