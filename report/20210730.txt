@@ -1,0 +1,81 @@
+【セットアップ】
+JavaScriptでできること
+・アニメーションなどの動きのあるWebページ開発
+・データのやり取りを伴うアプリケーション開発
+
+<ECMAScript>
+Ecma International の元で標準化手続きが行われているJavaScriptの規格
+ES2015 -- ECMAScriptが2015年に策定された仕様 (仕様変更の度に ESxxxx のような形で呼ばれる)
+ES2015 = ES6
+
+※Babelというツールを使用することで互換性のないブラウザでも使用可能にする(トランスパイル)
+
+【変数と型】
+JavaScriptのコメントアウト → // or /* */
+
+<JavaScript の変数宣言・定数宣言>
+let hoge; ← 変数宣言
+const fuga; ← 定数宣言
+※varは使用しない
+※モダン開発を行う現場では原則としてConstを使用し、再代入する場合のみletを使用する
+→ Kotlinと考え方が似てる？(var, val)
+
+<データ型>
+JavaScriptは動的型付け
+[number型]
+const n = 123;
+const l = 123.4 → 少数もnumber型 (doubleやfloatはなし)
+
+[string型]
+const str1 = 'Hello';
+const str2 = "Hello";
+const str3 = `${str1} world.` ←バッククォートのみ変数埋め込みが可能
+
+[boolean型]
+const bool1 = true;
+const bool2 = false;
+
+[null]
+const name = null;
+
+[undefined]
+let n; ← undefined
+
+<typeof>
+typeof を使用することで型チェックができる
+console.log(typeof "hoge"); ← string
+
+<0, null, undefined の違い>
+undefined:(typeof → Undefined)
+未メモリ割り当て状態
+
+null:(typeof → object)
+Nullというシンボルが与えられている状態
+
+0:(typeof → number)
+メモリ割り当て済み(0という数値が代入されている)
+
+※比較した場合：
+null == "" → false
+null == 0  → false
+undefined == null → true undefinedはnullとして扱われる
+undefined === null → false オブジェクトとして比較した場合は不一致
+
+<型変換>
+const bool = true;
+console.log(typeof bool);
+const str = String(bool); (boolean型からString型へ変換)
+console.log(typeof str); → String
+
+const str = "123";
+console.log(typeof str);
+const num = Number(str); (string型からnumber型へ変換)
+console.log(typeof num); → Number
+
+console.log(Boolean(1)); → true
+console.log(Boolean(0)); → false
+console.log(Boolean("Hello")); → true
+console.log(Boolean("")); → false
+
+
+
