@@ -1,0 +1,27 @@
+【スケジューリング】
+
+非同期で関数を実行させる
+setTimeout:指定時間経過後, 一度だけ関数を実行する
+setInerval:指定した間隔で定期的に関数を実行する
+
+<setTimeout>
+const timerId = setTimeout(<実行する関数>, 実行前の遅延時間, 関数の引数); 
+
+function say(arg) {
+  alert(arg);
+}
+const timerId = setTimeout(say, 1000, 'Hello');
+
+clearTimeout(timerId); ← clearTimeoutを挟むとスケジュールがキャンセルされる
+
+<setInterval>
+const timerId = setInterval(<実行する関数>, 実行前の遅延時間, 関数の引数)
+function say() {
+  alert('Hello');
+}
+const timerId = setInterval(say, 1000);
+function stop() {
+  clearTimeout(timerId);
+}
+setTimeout(stop, 5000);
+
