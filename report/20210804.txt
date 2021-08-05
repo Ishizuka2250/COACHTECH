@@ -1,0 +1,128 @@
+【日付】
+
+<インスタンス生成>
+Dateオブジェクトは以下のようにインスタンスを生成する
+const dt = new Date();
+console.log(dt);
+
+引数として文字列を指定するとその日付のインスタンスが作成される
+const dt = new Date("yyyy/mm/dd MM:hh:ss")
+
+カンマ区切りで指定する場合、以下の順番となる
+new Date(year,month,date,hours,minutes,seconds);
+→ 月(month)は0から始まる 1月 = 0
+
+<インスタンスから各種値の取得>
+[年]
+const dt = new Date();
+const year = dt.getFullYear();
+
+[月]
+const dt = newDate();
+const month = dt.getMonth() + 1;
+
+[日]
+const dt = new Date();
+const date = dt.getDate();
+
+[曜日]
+const dt = new Date();
+const dateT = ["日", "月", "火", "水", "木", "金", "土", "日"];
+const day = dateT[dt.getDay()]; //日曜日が0, 土曜日が6 で返却される
+
+[時]
+const dt = new Date();
+const hour = dt.getHours();
+
+[分]
+const dt = new Date();
+const minute = dt.getMinutes();
+
+[秒]
+const dt = new Date();
+const seconds = dt.getSeconds();
+
+<日付の計算>
+[年単位]
+const dt = new Date();
+dt.setYear(dt.getFullYear() + 1);
+
+[月単位]
+const dt = new Date();
+dt.setMonth(dt.getMonth() + 1);
+
+[日単位]
+const dt = new Date();
+dt.setDate(dt.getDate() + 1);
+
+[時間単位]
+const dt = new Date();
+dt.setHour(dt.getHour() + 1);
+
+[分単位]
+const dt = new Date();
+dt.setMinutes(dt.getMinutes() + 1);
+
+[秒単位]
+const dt = new Date();
+dt.setSeconds(dt.getSeconds + 1);
+
+<day.js>
+<script src="https://unpkg.com/dayjs"></script> // cdn読み込み
+<script src="https://unpkg.com/dayjs@1.7.7/locale/ja.js"></script> // 日本語に対応させるパッケージ読み込み
+
+<day.jsでの値取得>
+[年]
+const year = dayjs().year();
+
+[月]
+const month = dayjs().month() + 1;
+
+[日]
+const date = dayjs().date();
+
+[曜日]
+const day = dayjs().day();
+
+[時]
+const hours = dayjs().hour();
+
+[分]
+const minute = dayjs().minute();
+
+[秒]
+const seconds = dayjs().second();
+
+<formatメソッド>
+const year = dayjs().format('YYYY');
+const month = dayjs().format('MM');
+const date = dayjs().format('DD');
+const day = dayjs().format('dddd');
+const hours = dayjs().format('HH');
+const minutes = dayjs().format('mm')
+const seconds = dayjs().format('ss')
+
+<日付の計算>
+const addYear = dayjs().add(1, 'year').format('YYYY');
+const subYear = dayjs().subtract(1, 'year').format('YYYY');
+
+const addMonth = dayjs().add(1, 'month').format('MM');
+const subMonth = dayjs().subtract(1, 'month').format('MM');
+
+const addDay = dayjs().add(1, 'day').format('DD');
+const subDay = dayjs().subtract(1, 'day').format('DD');
+
+const addHour = dayjs().add(1, 'hour').format('HH');
+const subHour = dayjs().subtract(1, 'hour').format('HH');
+
+const addMin = dayjs().add(1, 'minute').format('mm');
+const subMin = dayjs().add(1, 'minute').format('mm');
+
+const addSec = dayjs().add(1, 'second').format('ss');
+const subSec = dayjs().add(1, 'second').format('ss');
+
+【DOM操作】
+
+
+
+
