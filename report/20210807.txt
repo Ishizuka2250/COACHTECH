@@ -1,0 +1,34 @@
+【例外処理】
+<try..catch構文>
+
+[tryブロック]
+例外が発生した場合catchブロックに処理を遷移する
+[catchブロック]
+tryブロックで例外発生後、catchブロックの処理を実行する (エラーオブジェクトも引数として呼び出される)
+[finallyブロック]
+catchブロックの後に実行される処理
+
+try {
+  console.log("try節：この行は実行される");
+  undefinedFunction();
+  console.log("try節：この行は実行されない");
+} catch (error) {
+  console.log("catch節：この行は実行される");
+  console.log(`エラーメッセージ：${error.message}`);
+} finally {
+  console.log("finally節：この行は実行される");
+}
+※catch節とfinally節のうちどちらかがあれば片方の節は省略可
+
+<throw文>
+throw文を使用することでユーザ独自の例外を投げることができる
+
+try {
+  throw new Error("例外が投げられた");
+} catch (error) {
+  console.log(error.message);
+}
+
+
+
+

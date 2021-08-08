@@ -1,0 +1,77 @@
+【DOM操作】
+
+<DOMとは>
+・DOMツリーと呼ばれる階層構造である
+・ノードと呼ばれるDOMツリーを形成するオブジェクトがある
+・JavaScriptとWebをつなぐ
+
+<DOMツリー>
+HTML → DOMツリー
+※HTMLは基本的に木構造になっている
+
+<ノード>
+DOMを形成するオブジェクトを指す
+[ノードの種類]
+・ドキュメントノード
+・テキストノード
+・属性ノード
+・要素ノード
+・コメントノード
+
+<要素の取得>
+document.getElementById(id) → idで要素を取得
+document.getElementsByClassName(class) → classで要素を取得
+document.getElementsByName(name) → name属性で要素を取得
+document.getElementsByTagName(tagname) → タグ名で要素を取得
+document.querySelector(selector) → セレクターで要素(最初の1つ)を取得
+document.querySelectorAll(selector) → セレクターで要素(複数)を取得
+
+<ノードウォーキング>
+ノードを起点に相対的に別ノードを取得する
+parentNode → 親ノードを取得
+childNodes → 子ノード群を取得
+firstChild → 最初の子ノードを取得
+lastChild → 最後の子ノードを取得
+previousSibling → 直前のノードを取得
+nextSibling → 直後のノードを取得
+
+<属性の取得・設定>
+className → クラス名の取得
+id → id名の取得
+textContent/innerContent → ノード内のテキストの取得
+innerHTML → ノード内のHTML要素の取得
+style → 要素のstyleの属性の取得
+
+以下の方法でもアクセス可能：
+getAttribute([属性名]);
+setAttribute([属性名], [値]);
+
+<イベント>
+イベントの例：
+DOMContentLoaded → Webページの読み込みが完了した時に発動
+click → マウスボタンをクリックした時に発動
+change → フォーム部品の状態が変更された時に発動
+scroll → 画面がスクロールした時に発動
+
+
+Document.querySelector()
+→ 指定されたセレクター, セレクターのグループに一致する
+　 文書内最初のElementを返す。
+　 一致するものがない場合はnullを返す。
+
+[clickの例]
+HTML:
+<button>ボタン</button>
+<script src="js/main.js"></script> ← 実行するElementのあとに置く必要がある
+JavaScript:
+const button = document.querySelector("button");
+console.log(button);
+button.addEventListener('click', function () {
+  alert('ボタンが押されました');
+});
+
+
+
+
+
+
