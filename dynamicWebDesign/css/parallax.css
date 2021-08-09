@@ -1,0 +1,17 @@
+body, html {
+  height: 100%;
+}
+.parallax-bg, .scrollbox {
+  color: #fff;
+  font-style: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.parallax-bg {
+  background: url('https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/Web%E5%AE%9F%E8%B7%B5/parallax.jpg');
+}
+.scrollbox {
+  background-color: #000;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/accordion.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="accordion">
+    <p class="menu">Menu1</p>
+    <div class="contents">Contents1</div>
+    <p class="menu">Menu2</p>
+    <div class="contents">Contents2</div>
+    <p class="menu">Menu3</p>
+    <div class="contents">Contents3</div>
+  </div>
+  <script>
+    const menu = document.getElementsByClassName('menu');
+    for (let i = 0; i < menu.length; i++) {
+      menu[i].addEventListener('click', toggle);
+    }
+    function toggle() {
+      const content = this.nextElementSibling;
+      console.log(this.nextElementSibling);
+      content.classList.toggle('is-open');
+    }
+  </script>
+</body>
+</html>

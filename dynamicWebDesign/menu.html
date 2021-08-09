@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/menu.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="#">link1</a></li>
+      <li><a href="#">link2</a></li>
+      <li><a href="#">link3</a></li>
+    </ul>
+  </nav>
+  <div class="humberger-menu" id="bg-menu">
+    <span class="humberger-menu__line--top"></span>
+    <span class="humberger-menu__line--middle"></span>
+    <span class="humberger-menu__line--bottom"></span>
+  </div>
+  <script>
+    const target = document.getElementById("bg-menu");
+    target.addEventListener('click', () => {
+      target.classList.toggle('open');
+      const nav = document.getElementById("nav");
+      nav.classList.toggle('in');
+    });
+  </script>
+  <div class="tab">
+    <ul class="tab-menu">
+      <li class="tab-menu__item active">タブ1</li>
+      <li class="tab-menu__item">タブ2</li>
+      <li class="tab-menu__item">タブ3</li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-content__item show">コンテンツ1</div>
+      <div class="tab-content__item">コンテンツ2</div>
+      <div class="tab-content__item">コンテンツ3</div>
+    </div>
+  </div>
+  <script>
+    const tabs = document.getElementsByClassName("tab-menu__item");
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].addEventListener('click', tabSwitch);
+    }
+    function tabSwitch() {
+      document.getElementsByClassName('active')[0].classList.remove('active');
+      this.classList.add('active');
+      console.log(this);
+      document.getElementsByClassName('show')[0].classList.remove('show');
+      console.log(this);
+      const arrayTabs = Array.prototype.slice.call(tabs);
+      const index = arrayTabs.indexOf(this);
+      document.getElementsByClassName('tab-content__item')[index].classList.add('show');
+    }
+  </script>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="#">Menu1</a>
+      <ul>
+        <li><a href="" class="href">Menu1-1</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Menu2</a>
+      <ul>
+        <li><a href="" class="href">Menu2-1</a></li>
+        <li><a href="" class="href">Menu2-2</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Menu3</a>
+      <ul>
+        <li><a href="" class="href">Menu3-1</a></li>
+        <li><a href="" class="href">Menu3-2</a></li>
+        <li><a href="" class="href">Menu3-3</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Menu4</a>
+      <ul>
+        <li><a href="" class="href">Menu4-1</a></li>
+        <li><a href="" class="href">Menu4-2</a></li>
+        <li><a href="" class="href">Menu4-3</a></li>
+        <li><a href="" class="href">Menu4-4</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

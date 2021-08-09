@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/modal.css">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" id="openButton" value="開く" class="openButton">
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <div class="modal__content-inner">
+        <p>モーダル</p>
+        <input type="button" id="closeButton" value="閉じる">
+      </div>
+    </div>
+  </div>
+  <script>
+    const openButton = document.getElementById('openButton');
+    const closeButton = document.getElementById('closeButton');
+    const modal = document.getElementById('modal');
+    openButton.addEventListener('click', () => {
+      modal.style.display = 'block';
+    });
+    closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    window.addEventListener('click', (e) => {
+      console.log(e.target.closest('.modal__content-inner'));
+      if (!e.target.closest('.modal__content-inner') && e.target.id !== "openButton") {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+transisition <transisition-property> <transisition-duration> <transition-timing-function> <transisition-delay>
+→ 要素2つの状態間の変化を定義するためのもの
+
+opacity: <値>
+→ 要素の不透明度を設定する [透明](0.0 ～ 1.0)[不透明]
+
+scrollTo:
+window.scrollTo(<x-coord>, <y-coord>);
+・x-coord - 要素の水平軸上で左上に表示したいピクセル
+・y-coord - 要素の垂直軸上で左上に表示したいピクセル
+window.scrollTo(<ScrollToOptions>);
+<ScrollToOptions>
+{
+  top:ウィンドウ, 要素をスクロールするためのY軸に沿ったピクセル数
+  left:ウィンドウ, 要素をスクロールするためのX軸に沿ったピクセル数
+  behavior:<smooth:ゆっくり移動する> or <auto:瞬時に移動する>
+}
+https://developer.mozilla.org/ja/docs/Web/API/Element/scrollTo
+
+100vhと100%の違い
+100vh = viewport上100%の高さ
+100% → 親要素での100%
+
+

@@ -29,6 +29,20 @@ try {
   console.log(error.message);
 }
 
+テスト問題に関する指摘事項
+問題1について
+filterの中でarrayを使いたかったらこれではダメですね…。変数名が同じarrayだからたまたま動いている気がします。
+// https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+const result = array.filter((value, index) => {return array.indexOf(value) == index});
+
+// こんな感じが正しい
+const result = array.filter((value, index, a) => {return a.indexOf(value) === index})
+→ 配列arrayを引数として渡す必要があった。
+
+問題2について
+if文を簡略化して書くべき
+
+
 
 
 

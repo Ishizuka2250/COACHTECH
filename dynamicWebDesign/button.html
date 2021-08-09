@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/button.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="top">top</div>
+  <a href="#" class="rect-button">ボタン</a>
+  <a href="#" class="rad-button">ボタン</a>
+  <a href="#" class="button-3d">ボタン</a>
+  <div class="content"></div>
+  <button class="scroll-top" id="button">↑</button>
+  <script>
+    function scrollTop(elem) {
+      const target = document.getElementById(elem);
+      target.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
+    scrollTop('button');
+  </script>
+</body>
+</html>
